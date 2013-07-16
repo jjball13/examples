@@ -1,8 +1,174 @@
 <!DOCTYPE>
 <html>
 <head>
+<title> Jarrad's Page</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+
+$("#welcome").mouseover(function(){
+    $("#welcome2").css("color","blue");
+  });
+  $("#welcome").mouseout(function(){
+    $("#welcome2").css("color","black");
+  });
+
+$("#languages").mouseover(function(){
+    $("#languages2").css("color","blue");
+  });
+  $("#languages").mouseout(function(){
+    $("#languages2").css("color","black");
+  });
+
+$("#javascript_ex").mouseover(function(){
+    $("#javascript_ex2").css("color","blue");
+  });
+  $("#javascript_ex").mouseout(function(){
+    $("#javascript_ex2").css("color","black");
+  });
+
+$("#my_photo").mouseover(function(){
+    $("#my_photo2").css("color","blue");
+  });
+  $("#my_photo").mouseout(function(){
+    $("#my_photo2").css("color","black");
+  });
+});
+</script>
+
+<style type="text/css">
+.wrapper {
+width:50%;
+margin: 0 auto;
+}
+
+#header {
+height:100;
+margin-top:20px;
+background:linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%);;
+display:relative;
+font-family: Arial, serif;
+box-shadow:1px 1px 7px #888888;
+padding-left:4em;
+border-radius:0.5em;
+}
+
+#name {
+font-size:2em
+}
+
+#city {
+padding-left:60px;
+}
+
+h2 {
+padding:1em 1em 0em 0em;
+font-color:brown;
+font-style: italics;
+}
+
+.section {
+background:white;
+margin:5% 0% 5% 0%;
+box-shadow:1px 1px 7px #888888;
+border-radius:0.5em;
+padding:0em 2em 1em 2em;
+text-align:justify;
+line-height:1.5em;
+}
+
+#language_table {
+border:2px solid black;
+border-collapse:collapse;
+}
+
+th {
+padding:.6em;
+border-bottom:1px solid black;
+}
+
+#language_table td {
+padding:.6em;
+border-left:1px solid black;
+}
+
+span {
+color:red;
+font-style:italic;
+}
+
+</style>
 </head>
-<body>
-dfdf
+
+<body style="background:linear-gradient(to bottom, #ffffff 0%,#f1f1f1 72%,#e1e1e1 100%,#f6f6f6 100%); font-family:Arial, serif">
+<div class="wrapper">
+
+<div id="header">
+<table style="padding:.5em">
+<tr>
+<td><img src="http://farm4.staticflickr.com/3696/9296461381_32f3bfb2bb_s.jpg" width="75" height="75"></td>
+<td style="padding:.7em"><div id="name">Jarrad Solomon</div><div id="city">New York City</div></div></td>
+</table>
+</div>
+<div class="section" id="welcome">
+<h2 id="welcome2">Welcome</h2>Thanks for checking out my page. I created it in order to demonstrate what I've learned in HTML/CSS. I have recently re-discovered my passion for programming. In high school I took an HTML class and loved it so much I volunteered for a non-profit to help them with their site.
+<p>Only recently did I discover a great online programming resource, which allowed me to re-kindle my passion. Having enjoyed learning their introductory courses (see table below), I began to search for more serious courses and found your school.<p>I have applied to your 3 month course starting in September because unlike a typical school, I believe in your program's mission and teaching style, with my goal afterward to pursue a career as a web developer.</p><p>Some qualities that led me to programming:</p>  
+<ul id="qualities" style="width:15em">
+<li>analytical</li>
+<li>passion for creating</li>
+<li>team player</li>
+</ul>
+</div>
+
+<div class="section" id="languages">
+<h2 id="languages2">Languages</h2>
+These are the programming languages I've learned so far...<br><br>
+<table id="language_table">
+<thead>
+<tr>
+<th>Language</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML/CSS</td>
+<td>codeacademy.com</td>
+</tr>
+<tr>
+<td>Javascript</td>
+<td>codeacademy.com</td>
+</tr>
+<tr>
+<tr>
+<td>Ruby</td>
+<td>codeacademy.com</td>
+</tr>
+</tbody>
+</table>
+<p>...and am continuing to develop these and learn new lanuages using codeacademy.com and treehouse.com, including <span>PHP</span>, <span>PYHTON</span>, <span>SQL</span>, and <span>jQuery</span>.  
+</p>
+</div>
+
+<div class="section" id="javascript_ex">
+<h2 id="javascript_ex2">Javascript Example</h2>
+<div>Here is code that I wrote for an idea to more easily keep track of what you eat on a daily basis.<br>For example, it tells you how many calories you've eaten compared to your daily goal. 
+</div>
+<p><script src="https://gist.github.com/jjball13/6006821.js"></script>
+</p>
+</div>
+
+<div class="section" id="my_photo">
+<h2 id="my_photo2">My Photography</h2>
+<table style="margin:auto">
+<tr>
+<td style="padding:7px"><img src="http://farm8.staticflickr.com/7296/9296457691_b8ca237d0e.jpg" width="150" height="150"></td>
+<td style="border-left:1px solid black;padding:7px"><img src="http://farm8.staticflickr.com/7451/9299234156_fd7f92c966_q.jpg" width="150" height="150"></td>
+<td style="border-left:1px solid black;padding:7px"><img src="http://farm3.staticflickr.com/2843/9296465455_1073ee3316_q.jpg" width="150" height="150"></td>
+<td style="border-left:1px solid black;padding:7px"><img src="http://farm6.staticflickr.com/5508/9299234706_fa30a1afb9_q.jpg" width="150" height="150"></td>
+</tr>
+</table>
+</div>
 </body>
 </html>
