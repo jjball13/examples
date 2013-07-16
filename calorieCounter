@@ -1,0 +1,36 @@
+var calorieGoal = prompt("Enter your daily calorie goal:");
+var calorieCounter = {
+total:0,
+add: function(calories) {
+this.total += calories;
+this.lastItemAmount=calories;
+},
+scan: function(item,servings) {
+switch (item) {
+case "bagel": this.add(300 * servings); break;
+case "cheese": this.add(100 * servings); break;
+case "cereal": this.add(150 * servings); break;
+case "chocolate": this.add(50 * servings); break;
+}
+return true;
+},
+voidLastItem: function() {
+this.total-=this.lastItemAmount;
+}
+};
+ 
+calorieCounter.scan("bagel",1);
+calorieCounter.scan("cheese",2);
+calorieCounter.scan("cereal",1);
+calorieCounter.scan("chocolate",3);
+ 
+calorieCounter.voidLastItem();
+calorieCounter.scan("chocolate",4);
+ 
+if(calorieGoal>calorieCounter.total){
+console.log("You've eaten "+calorieCounter.total+" calories today. You can still eat "+(calorieGoal-calorieCounter.total)+" calories before you reach your daily limit.");
+} else if(calorieGoal<calorieCounter.total) {
+console.log("You've eaten "+calorieCounter.total+" calories today. You are "+(calorieCounter.total-calorieGoal)+" calories over your limit..no more calories for you today!");
+} else {
+console.log("You've eaten "+calorieCounter.total+" calories today. You have reached your daily limit.");
+}
